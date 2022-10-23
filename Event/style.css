@@ -1,0 +1,35 @@
+a{
+    text-decoration: none;
+}
+
+.icons-box a{
+    border: 2px solid rgb(225, 225, 225);
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.event-image{
+    /* height: 100%; */
+    object-fit: cover;
+    aspect-ratio: 3 / 2;
+    margin-bottom: 1rem;
+}
+.card{
+    position: relative;
+    border: none;
+}
+.card-body{
+    padding-top: 0;
+}
+.icons-box {
+    position: absolute;
+    top: 5px;
+    right: 5px
+    ;
+}
+.navbar-brand{
+    color: orangered;
+    font-weight: 700;
+}
