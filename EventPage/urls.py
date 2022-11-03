@@ -6,6 +6,7 @@ urlpatterns = [
     path('events/', views.Event, name='event'),
     path('user-register/', views.Register, name='register'),
     path('login/', views.Login, name='login'),
+    path('logout/', views.LogOut, name='logout'),
     path('liked-events/', views.LikedEvent, name='liked-events'),
     
 ]

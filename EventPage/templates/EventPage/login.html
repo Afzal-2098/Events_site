@@ -43,6 +43,14 @@
           <li class="nav-item">
             <a class="nav-link" href="/events/">Browse Events</a>
           </li>
+          {% if request.user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="#">{{request.user}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout/">Logout</a>
+          </li>
+          {% endif %}
         </ul>
         <form class="d-flex">
           <input
@@ -61,7 +69,7 @@
  <section>
   {% if messages%}
       {% for message in messages %}
-        <div class="alert alert-{{message.tags}}"><p>{{message}}</p></div>
+        <div class="alert alert-{{message.tags}} text-center"><p>{{message}}</p></div>
       {% endfor %}
     {% endif %}
  </section>
@@ -71,6 +79,9 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
+        {% if request.user.is_authenticated %}
+          <p>Go to <a href="/"><b>Home Page</b></a></p>
+        {% endif %}
           <h1 class="mb-3">User Login</h1>
         </div>
         <div class="col-lg-8">
@@ -103,5 +114,7 @@
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"
   ></script>
+  <script src="{% static 'EventPage/js/jquery.js' %}"></script>
+  <script src="{% static 'EventPage/js/engine.js' %}"></script>
 </body>
 </html>

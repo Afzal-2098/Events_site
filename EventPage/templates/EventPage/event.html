@@ -45,26 +45,6 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
             </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li>
           </ul>
           <form class="d-flex">
             <input
@@ -123,18 +103,8 @@
                             >{{event.location}}</small
                           >
                         </p>
-
                         <div class="icons-box d-flex justify-content-end">
-                          <form action="/events/" method="POST">
-                            {% csrf_token %}
-                            <input type="hidden" id="{{event.id}}" name="eventname" value="{{event.id}}">
-                            <button><i class="far fa-heart"></i></button>
-                            {% comment %} {% if messages %}
-                            <button><i class="fas fa-heart"></i></button>
-                            {% else %}
-                            <button><i class="far fa-heart"></i></button>
-                          {% endif %} {% endcomment %}
-                        </form>
+                            <button id="btnevent"><i class="far fa-heart"></i></button>
                         </div>
                       </div>
                     </div>
@@ -159,5 +129,7 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
+    <script src="{% static 'EventPage/js/jquery.js' %}"></script>
+    <script src="{% static 'EventPage/js/engine.js' %}"></script>
   </body>
 </html>

@@ -71,7 +71,7 @@
     <section>
       {% if messages%}
       {% for message in messages %}
-        <div class="alert alert-{{message.tags}}"><p>{{message}} <a href="/login">Login Here</a></p></div>
+        <div class="alert alert-{{message.tags}} text-center"><p>{{message}}<a href="/login">Login Here</a></p></div>
       {% endfor %}
     {% endif %}
   </section>
@@ -130,5 +130,7 @@
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"
   ></script>
+  <script src="{% static 'EventPage/js/jquery.js' %}"></script>
+  <script src="{% static 'EventPage/js/engine.js' %}"></script>
 </body>
 </html>
