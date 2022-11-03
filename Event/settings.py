@@ -79,9 +79,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'event',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': '127.0.0.1',
+        'USER': 'admin',
+        'PASSWORD': 'passawsdb20x',
+        'HOST': 'database-1.ct1l0urazaas.ap-northeast-1.rds.amazonaws.com',
         'PORT': '3306',
     }
 }
